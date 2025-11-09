@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="hy">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BusVoyage</title>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @layer utilities {
+            .glass {
+                background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(250, 250, 250, 0.85));
+                box-shadow: 0 6px 30px rgba(2, 6, 23, 0.08);
+                border-radius: 12px;
+            }
+        }
+
+        .world-bg {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            opacity: 0.15;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-slate-800 antialiased">
+    <header class="max-w-8xl mx-auto px-6 py-6 flex items-center justify-between">
+        <div class="flex items-center gap-4">
+            <div class="flex items-center gap-5">
+                <div class="flex items-center">
+                    <img src="./icon/ChatGPT Image 8 нояб. 2025 г., 15_35_53.png" alt="BUSVOYAGE Logo"
+                        class="object-contain" style="height: auto; width: 150px;">
+                </div>
+
+                <div class="flex justify-end gap-2">
+                    <button class="px-3 py-1 rounded-full text-sm border border-slate-200">arm</button>
+                    <button class="px-3 py-1 rounded-full text-sm border border-slate-200">rus</button>
+                    <button class="px-3 py-1 rounded-full text-sm border border-slate-200">eng</button>
+                </div>
+    </header>
+
+    <main class="relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6">
+            <h1 class="text-center mt-6 text-6xl md:text-7xl font-extrabold text-slate-900 leading-tight"
+                style="font-family:'Georgia', uppercase text-lg text-blue-900, serif;">Ուղղություններ</h1>
+
+            <div class="-mt-4 relative z-20">
+                <div class="glass mx-auto mt-8 p-6 rounded-xl shadow-md max-w-5xl">
+                    <form class="grid grid-cols-1 md:grid-cols-6 gap-4 items-end">
+                        <div class="md:col-span-1">
+                            <label class="block text-xs text-slate-600 mb-1">Որտեղից</label>
+                            <input class="w-full px-3 py-2 rounded-lg border border-slate-200" placeholder="Երևան" />
+                        </div>
+                        <div class="md:col-span-1">
+                            <label class="block text-xs text-slate-600 mb-1">Որտեղ</label>
+                            <input class="w-full px-3 py-2 rounded-lg border border-slate-200" placeholder="Մոսկվա" />
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-xs text-slate-600 mb-1">Օր</label>
+                            <input type="date" class="w-full px-3 py-2 rounded-lg border border-slate-200" />
+                        </div>
+                        <div class="md:col-span-1">
+                            <label class="block text-xs text-slate-600 mb-1">Ժամ</label>
+                            <input type="time" class="w-full px-3 py-2 rounded-lg border border-slate-200"
+                                value="14:00" />
+                        </div>
+                        <div class="md:col-span-1">
+                            <label class="block text-xs text-slate-600 mb-1">Արժեք (դրամ)</label>
+                            <div class="flex gap-2">
+                                <input type="number" class="w-1/2 px-3 py-2 rounded-lg border border-slate-200"
+                                    placeholder="0" />
+                                <input type="number" class="w-1/2 px-3 py-2 rounded-lg border border-slate-200"
+                                    placeholder="max" />
+                            </div>
+                            <button type="button"
+                                class="w-full mt-4 px-4 py-2 rounded-md bg-slate-700 text-white">Փնտրել</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <section class="mt-8">
+            <div class="relative h-[520px]">
+                <div class="absolute inset-0 world-bg"></div>
+                <div
+                    class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-slate-600/40 rounded-full p-6 shadow-lg">
+                    <div class="flex items-center gap-3 text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 opacity-90" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 opacity-90" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 opacity-90" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="max-w-7xl mx-auto px-6 py-10 text-sm text-slate-500">
+        <div class="flex justify-between">
+            <div>© BusVoyage</div>
+            <div>Contacts • About • Help</div>
+        </div>
+    </footer>
+</body>
+
+</html>
